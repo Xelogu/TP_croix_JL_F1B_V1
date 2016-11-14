@@ -1,0 +1,53 @@
+//PROGRAMME Algotp1croix
+ //But : dessine une croix avec un caractère et une taille donnée
+ //Entées : un caractère à afficher et un nombre pour la taille
+ //Sorties : une croix avec le caractère et la taille entrée
+
+//VAR
+//	caractere : CARACTERE 
+//	Hauteur, i, j : ENTIER
+//	
+//DEBUT
+//	ECRIRE "Bienvenue dans l algorithme dessinant une croix en caractere"
+//	ECRIRE "Quel caractère voulez-vous afficher ?"
+//	LIRE caractere
+//	ECRIRE "Quelle est à la hauteur de votre croix ?"
+//	LIRE Hauteur
+//	// début du traitement de la croix
+//	POUR i DE 1 à Hauteur FAIRE
+//		POUR j DE 1 à Hauteur FAIRE
+//			SI (j = i) OU (j = Hauteur - (i - 1)) ALORS
+//				ECRIRE caractere
+//			SINON
+//				ECRIRE ' '
+//			ECRIRE // passa à la ligne
+//FIN 
+// ----------------------------------------------------------------
+uses crt;
+
+var
+	caractere : char;
+	Hauteur, i, j : integer;
+
+BEGIN
+	clrscr;
+	writeln('Bienvenue dans l algorithme dessinant une croix en caractere');
+	writeln('Entrez le caractere qui sera affiche.');
+	readln(caractere);
+	writeln('Entrez la hauteur de la croix');
+	readln(Hauteur);
+	// debut de traitement de la croix
+
+	for i:= 1 to Hauteur do
+	begin 
+		for j:= 1 to Hauteur do 
+		begin
+			if (j=i) or (j = Hauteur- (i -1)) then
+				write(caractere)
+			else
+				write(' ')
+		end;
+		writeln();
+	end;
+	readln;
+END.
